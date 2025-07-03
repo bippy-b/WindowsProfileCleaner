@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsProfileCleaner.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\test\WindowsProfileService\</Value>
+    </Setting>
+    <Setting Name="Debug" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="CheckInterval" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">43200000</Value>
+    </Setting>
+    <Setting Name="DelProfile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="SearchDomains" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">iconcr.com,am.iconcr.com,eu.iconcr.com,beacon.iconcr.com,docs.iconcr.com,lab.iconcr.com</Value>
+    </Setting>
+    <Setting Name="EXEPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\test\WindowsProfileService\</Value>
+    </Setting>
+    <Setting Name="BATPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\test\WindowsProfileService\</Value>
+    </Setting>
+    <Setting Name="AccountIgnore" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BenedictD,BenedictD1_admin,Administrator</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

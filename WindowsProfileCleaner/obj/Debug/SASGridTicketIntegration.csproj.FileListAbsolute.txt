@@ -1,0 +1,8 @@
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\bin\Debug\SASGridTicketIntegration.exe.config
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\bin\Debug\SASGridTicketIntegration.exe
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\bin\Debug\SASGridTicketIntegration.pdb
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\obj\Debug\SASGridTicketIntegration.csprojResolveAssemblyReference.cache
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\obj\Debug\SASGridTicketIntegration.ProjectInstaller.resources
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\obj\Debug\SASGridTicketIntegration.csproj.GenerateResource.Cache
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\obj\Debug\SASGridTicketIntegration.exe
+c:\users\benedictd\documents\visual studio 2012\Projects\SASGridTicketIntegration\SASGridTicketIntegration\obj\Debug\SASGridTicketIntegration.pdb

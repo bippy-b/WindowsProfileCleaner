@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Targets>
+  <Target Name="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner\bin\Debug\WindowsProfileCleaner.exe">
+   <Modules>
+    <Module Name="windowsprofilecleaner.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'WindowsProfileCleaner.exe' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'WindowsProfileCleaner.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">Because assembly 'WindowsProfileCleaner.exe' contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="WindowsProfileCleaner">
+       <Types>
+        <Type Name="Library" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDomainUsers(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="304">In method 'Library.GetDomainUsers(string)', call System.IDisposable.Dispose on object 'ctx' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="310">In method 'Library.GetDomainUsers(string)', call System.IDisposable.Dispose on object 'qbeUser' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="313">In method 'Library.GetDomainUsers(string)', call System.IDisposable.Dispose on object 'srch' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="301">Change 'List&lt;string&gt;' in 'Library.GetDomainUsers(string)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetLocalComputerUsers()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="273">In method 'Library.GetLocalComputerUsers()', call System.IDisposable.Dispose on object 'ctx' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="276">In method 'Library.GetLocalComputerUsers()', call System.IDisposable.Dispose on object 'qbeUser' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="279">In method 'Library.GetLocalComputerUsers()', call System.IDisposable.Dispose on object 'srch' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="267">Change 'List&lt;string&gt;' in 'Library.GetLocalComputerUsers()' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="267">Change 'Library.GetLocalComputerUsers()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LookupUser(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="166">In method 'Library.LookupUser(string, string)', call System.IDisposable.Dispose on object 'AD' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="173">In method 'Library.LookupUser(string, string)', call System.IDisposable.Dispose on object 'search' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="169">In method 'Library.LookupUser(string, string)', call System.IDisposable.Dispose on object 'u' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="204">Modify 'Library.LookupUser(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="Acct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="141">In member 'Library.LookupUser(string, string)', correct the casing of 'Acct' in parameter name 'AcctName' by changing it to 'acct'.</Issue>
+            </Message>
+            <Message Id="User" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="141">In member 'Library.LookupUser(string, string)', correct the casing of 'User' in parameter name 'UserSid' by changing it to 'user'.</Issue>
+            </Message>
+            <Message Id="NLog.Logger.Error(System.String,System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="207">Because the behavior of 'Logger.Error(string, string)' could vary based on the current user's locale settings, replace this call in 'Library.LookupUser(string, string)' with a call to 'Logger.Error(IFormatProvider, string, string)'. If the result of 'Logger.Error(IFormatProvider, string, string)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LookupUserWithDomain(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="106">In method 'Library.LookupUserWithDomain(string, string)', call System.IDisposable.Dispose on object 'AD' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="114">In method 'Library.LookupUserWithDomain(string, string)', call System.IDisposable.Dispose on object 'search' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="110">In method 'Library.LookupUserWithDomain(string, string)', call System.IDisposable.Dispose on object 'u' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="131">Modify 'Library.LookupUserWithDomain(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="Acct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="100">In member 'Library.LookupUserWithDomain(string, string)', correct the casing of 'Acct' in parameter name 'AcctName' by changing it to 'acct'.</Issue>
+            </Message>
+            <Message Id="User" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="100">In member 'Library.LookupUserWithDomain(string, string)', correct the casing of 'User' in parameter name 'UserDomain' by changing it to 'user'.</Issue>
+            </Message>
+            <Message Id="NLog.Logger.Error(System.String,System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="133">Because the behavior of 'Logger.Error(string, string)' could vary based on the current user's locale settings, replace this call in 'Library.LookupUserWithDomain(string, string)' with a call to 'Logger.Error(IFormatProvider, string, string)'. If the result of 'Logger.Error(IFormatProvider, string, string)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerifyAccount(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Acct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="216">In member 'Library.VerifyAccount(string)', correct the casing of 'Acct' in parameter name 'AcctName' by changing it to 'acct'.</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="251">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'Library.VerifyAccount(string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="251">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'Library.VerifyAccount(string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="232">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Library.VerifyAccount(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="233">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Library.VerifyAccount(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="251">In externally visible method 'Library.VerifyAccount(string)', validate parameter 'AcctName' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteBatchFile(System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="80">In method 'Library.WriteBatchFile(string, bool)', call System.IDisposable.Dispose on object 'sw' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="84">In method 'Library.WriteBatchFile(string, bool)', call System.IDisposable.Dispose on object 'sw' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="91">Modify 'Library.WriteBatchFile(string, bool)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="Overwrite" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="67">In member 'Library.WriteBatchFile(string, bool)', correct the casing of 'Overwrite' in parameter name 'Overwrite' by changing it to 'overwrite'.</Issue>
+            </Message>
+            <Message Id="NLog.Logger.Error(System.String,System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Library.cs" Line="93">Because the behavior of 'Logger.Error(string, string)' could vary based on the current user's locale settings, replace this call in 'Library.WriteBatchFile(string, bool)' with a call to 'Logger.Error(IFormatProvider, string, string)'. If the result of 'Logger.Error(IFormatProvider, string, string)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Scheduler" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#timer1_Tick(System.Object,System.Timers.ElapsedEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="WindowsProfileCleaner.Library.WriteBatchFile(System.String,System.Boolean)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="236">Method 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' passes a literal string as parameter 'message' of a call to 'Library.WriteBatchFile(string, bool)'. Retrieve the following string(s) from a resource table instead: "DelProf2.exe /u /id2:,  &gt;&gt;\", DelProf2_, .log\"".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="232">Method 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' passes a literal string as parameter 'message' of a call to 'Library.WriteBatchFile(string, bool)'. Retrieve the following string(s) from a resource table instead: "cd \", \"".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="294">Modify 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="99">Because the behavior of 'Convert.ToDouble(string)' could vary based on the current user's locale settings, replace this call in 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' with a call to 'Convert.ToDouble(string, IFormatProvider)'. If the result of 'Convert.ToDouble(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="208">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="113">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="115">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2024-03-08 17:26:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="U:\Visual Studio 2022\WindowsProfileCleaner\WindowsProfileCleaner" File="Scheduler.cs" Line="141">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'Scheduler.timer1_Tick(object, ElapsedEventArgs)' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="MemberParameter">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>Mark assemblies with NeutralResourcesLanguageAttribute</Name>
+   <Description>The NeutralResourcesLanguage attribute informs the ResourceManager of the language used to render the neutral culture's resources for an assembly. When looking up resources in the same culture as the neutral resources language, the ResourceManager automatically uses the resources located in the main assembly, instead of searching for a satellite assembly with the current user interface culture for the current thread. This will improve lookup performance for the first resource you load and can reduce your working set.</Description>
+   <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182189.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Specify StringComparison</Name>
+   <Description>If an overload exists that takes a StringComparison argument, it should always be called in favor of an overload that does not.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
